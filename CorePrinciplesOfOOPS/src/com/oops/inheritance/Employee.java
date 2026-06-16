@@ -1,8 +1,8 @@
 package com.oops.inheritance;
 
 
-class Employee {
 
+class Employee{
     private String name;
     private int id;
 
@@ -10,52 +10,40 @@ class Employee {
         this.name=name;
         this.id=id;
     }
-
     public void displayDetails(){
-
-        System.out.printf("Name : %s\n" ,name);
-        System.out.println("Id : " +id);
-        
+        System.out.println("Name : "+name);
+        System.out.println("Id : "+id);
     }
-
-
-
-
 }
-
 
 
 class Manager extends Employee{
-    private int size;
+    private int teamSize;
 
-    public Manager(String name,int id, int size){
+    public Manager(String name,int id,int teamSize){
         super(name,id);
-        this.size=size;
+        this.teamSize=teamSize;
     }
 
     public void displayDetails(){
-
         super.displayDetails();
-        System.out.println("Team Size : " +size);
-        
+        System.out.println("Team Size : "+teamSize);
     }
-
-
 }
+
 
 
 class Engineer extends Employee{
     private String specialization;
 
-    public Engineer(String name,int id, String specialization){
+    public Engineer(String name,int id,String specialization){
         super(name,id);
         this.specialization=specialization;
     }
 
     public void displayDetails(){
         super.displayDetails();
-        System.out.println("Specialization : " +specialization);
-        
+        System.out.println("Specialization : "+specialization);
     }
 
 
